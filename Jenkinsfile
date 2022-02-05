@@ -1,3 +1,3 @@
-def response = httpRequest "http://httpbin.org/response-headers?param1=${param1}"
+def response = httpRequest "http://httpbin.org"
 println('Status: '+response.status)
 println('Response: '+response.content)
