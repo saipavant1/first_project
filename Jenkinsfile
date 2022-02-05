@@ -3,7 +3,7 @@ pipeline{
   stages {
     stage('Build') {
       steps {
-        echo "Building stages!!!!"
+        sh ('curl --version')
       }
     }
     stage('Test') {
