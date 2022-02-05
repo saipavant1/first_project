@@ -3,9 +3,8 @@ pipeline{
   stages {
     stage('Build') {
       steps {
-        def response = httpRequest 'http://google.com'
-            println("Status": "+response.code")
-            println("Content": "+response.content")
+      steps {
+        echo "Building stages!!!!"
       }
     }
     stage('Test') {
