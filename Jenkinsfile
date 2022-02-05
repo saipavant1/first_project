@@ -3,7 +3,9 @@ pipeline{
   stages {
     stage('Build') {
       steps {
-        sh ('curl --version')
+        def response = httpRequest 'http://google.com'
+            println("Status": "+response.code")
+            println("Content": "+response.content")
       }
     }
     stage('Test') {
